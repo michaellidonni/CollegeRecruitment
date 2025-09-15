@@ -1,0 +1,16 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.main ul {
+    margin: auto;
+    padding: 20px 0 0;
+    list-style: none;
+    text-align: right;
+}
