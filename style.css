@@ -12,6 +12,7 @@ body {
 .main {
     width: 1170px;
     margin: 0 auto;
+    background-color: black;
 }
 
 .main ul {
@@ -79,5 +80,55 @@ body {
 
 .logo:hover {
     transform: translate(0, 0) rotate(360deg);
-    transition: 1s;
+    transition: 2s;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.Name {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FDD700;
+    font-family: "adobe-garamond-pro", "Garamond", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #293F6F, -1px 1px 0 #293F6F, 1px -1px 0 #293F6F,
+        -1px -1px 0 #293F6F, 0px 1px 0 #293F6F, 0px -1px 0 #293F6F,
+        -1px 0px 0 #293F6F, 1px 0px 0 #293F6F, 2px 2px 0 #293F6F, -2px 2px 0 #293F6F,
+        2px -2px 0 #293F6F, -2px -2px 0 #293F6F, 0px 2px 0 #293F6F,
+        0px -2px 0 #293F6F, -2px 0px 0 #293F6F, 2px 0px 0 #293F6F, 1px 2px 0 #293F6F,
+        -1px 2px 0 #293F6F, 1px -2px 0 #293F6F, -1px -2px 0 #293F6F,
+        2px 1px 0 #293F6F, -2px 1px 0 #293F6F, 2px -1px 0 #293F6F,
+        -2px -1px 0 #293F6F;
+}
+
+img {
+    width: 75px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.4);
 }
