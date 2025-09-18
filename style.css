@@ -12,7 +12,10 @@ body {
 .main {
     width: 1170px;
     margin: 0 auto;
-    background-color: black;
+    background-color: #a67a00;
+    margin-top: 10px;
+    border: 3px solid #293F6F;
+    border-radius: 10px;
 }
 
 .main ul {
@@ -50,7 +53,7 @@ body {
     display: block;
     font-family: lucida console;
     padding: 5px 20px;
-
+    margin-bottom: 15px;
 }
 
 .main ul li a:hover {
