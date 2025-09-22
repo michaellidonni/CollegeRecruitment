@@ -1,46 +1,128 @@
-const img = document.getElementById("fly");
-const logoWrapper = document.getElementById("landing-wrapper"); // logo container
-let start = null;
-let direction = 1; // 1 = left→right, -1 = right→left
-let roundTrip = 0;
-
-function animate(timestamp) {
-    if (!start) start = timestamp;
-    const progress = (timestamp - start) / 1000; // duration 2s
-    const t = Math.min(progress, 1);
-
-    // Arc path (quadratic curve)
-    const screenWidth = window.innerWidth + 200;
-    const x = direction === 1
-        ? t * screenWidth - 100
-        : (1 - t) * screenWidth - 100;
-
-    const y = 50 * Math.sin(t * Math.PI) + window.innerHeight / 2 - 100;
-    // ↑ increased from 50 → 200 for higher arc
-
-    img.style.left = `${x}px`;
-    img.style.top = `${y}px`;
-
-    // Flip image when turning around
-    img.style.transform = direction === 1
-        ? "scaleX(1)"
-        : "scaleX(-1)";
-
-    if (t < 1) {
-        requestAnimationFrame(animate);
-    } else {
-        roundTrip++;
-        if (roundTrip < 2) { // turn around after first pass
-            direction *= -1;
-            start = null;
-            requestAnimationFrame(animate);
-        } else {
-            // plane disappears
-            img.style.display = "none";
-            // show logo
-            logoWrapper.style.display = "flex";
-        }
+const majorsBySchool = [
+    {
+        school: "Arts and Communication",
+        majors: [
+            "Art education",
+            "Communication studies",
+            "Interactive multimedia",
+            "Journalism and professional writing",
+            "Music",
+            "Music education",
+            "Music performance",
+            "Visual arts",
+            "Fine art",
+            "Graphic design",
+            "Photography and video",
+            "Undeclared–School of the Arts and Communication"
+        ]
+    },
+    {
+        school: "Business",
+        majors: [
+            "Accounting",
+            "Business administration",
+            "Finance",
+            "Interdisciplinary business",
+            "Management",
+            "Marketing",
+            "Economics",
+            "Undeclared–School of Business"
+        ]
+    },
+    {
+        school: "Education",
+        majors: [
+            "Early childhood education",
+            "Education of the deaf and hard of hearing",
+            "Elementary education",
+            "Secondary education",
+            "Special education",
+            "Speech-language pathology and audiology"
+        ]
+    },
+    {
+        school: "Engineering",
+        majors: [
+            "Biomedical engineering",
+            "Civil engineering",
+            "Computer engineering",
+            "Electrical engineering",
+            "Engineering science",
+            "Engineering management",
+            "Robotics",
+            "Integrative STEM education",
+            "Mechanical engineering",
+            "Technology and engineering education",
+            "Undeclared–School of Engineering"
+        ]
+    },
+    {
+        school: "Humanities and Social Sciences",
+        majors: [
+            "African American studies",
+            "Anthropology",
+            "Criminology",
+            "English",
+            "Environmental studies",
+            "History",
+            "International studies",
+            "Philosophy",
+            "Political science",
+            "Psychology",
+            "Sociology",
+            "Spanish",
+            "Women’s, gender, and sexuality studies",
+            "World languages and linguistics",
+            "Undeclared–School of Humanities and Social Sciences"
+        ]
+    },
+    {
+        school: "Nursing and Health Sciences",
+        majors: [
+            "Kinesiology and health sciences",
+            "Nursing",
+            "Physical therapy",
+            "Public health"
+        ]
+    },
+    {
+        school: "Science",
+        majors: [
+            "Biology",
+            "Chemistry",
+            "Biochemistry",
+            "Materials science",
+            "Computer science",
+            "Cybersecurity",
+            "Data science",
+            "Mathematics",
+            "Applied mathematics",
+            "Data science and statistics",
+            "Medicine",
+            "Optometry",
+            "Pharmacy",
+            "Physics"
+        ]
     }
-}
+];
 
-requestAnimationFrame(animate);
+const container = document.getElementById("majors-container");
+
+majorsBySchool.forEach(group => {
+    group.majors.forEach(major => {
+        const card = document.createElement("div");
+        card.classList.add("major-card");
+
+        const title = document.createElement("h3");
+        title.classList.add("major-title");
+        title.textContent = major;
+        card.appendChild(title);
+
+        const schoolName = document.createElement("p");
+        schoolName.classList.add("major-school");
+        schoolName.textContent = group.school;
+        card.appendChild(schoolName);
+
+        container.appendChild(card);
+    });
+});
