@@ -1,3 +1,4 @@
+
 const majorsBySchool = [
     {
         school: "Arts and Communication",
@@ -108,21 +109,27 @@ const majorsBySchool = [
 
 const container = document.getElementById("majors-container");
 
-majorsBySchool.forEach(group => {
-    group.majors.forEach(major => {
-        const card = document.createElement("div");
-        card.classList.add("major-card");
+if (container) {
+    // For each school group, create one card per major
+    majorsBySchool.forEach(group => {
+        group.majors.forEach(major => {
+            const card = document.createElement("div");
+            card.classList.add("major-card");
 
-        const title = document.createElement("h3");
-        title.classList.add("major-title");
-        title.textContent = major;
-        card.appendChild(title);
+            // Major title
+            const title = document.createElement("h3");
+            title.classList.add("major-title");
+            title.textContent = major;
+            card.appendChild(title);
 
-        const schoolName = document.createElement("p");
-        schoolName.classList.add("major-school");
-        schoolName.textContent = group.school;
-        card.appendChild(schoolName);
+            // School label
+            const schoolName = document.createElement("p");
+            schoolName.classList.add("major-school");
+            schoolName.textContent = group.school;
+            card.appendChild(schoolName);
 
-        container.appendChild(card);
+            // Append to DOM
+            container.appendChild(card);
+        });
     });
-});
+}

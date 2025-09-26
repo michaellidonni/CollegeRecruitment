@@ -2,12 +2,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: skyblue;
-    /* don't force a 100vh/100% which can create overflow on small viewports */
     min-height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    /* prevent accidental horizontal scroll while preserving vertical scroll */
     overflow-x: hidden;
 }
 
@@ -98,7 +96,6 @@ body {
     height: 100vh;
     transform: translate(50%, 50%);
     object-fit: cover;
-    /* cover the viewport without creating overflow */
     z-index: -1;
 }
 

@@ -1,164 +1,166 @@
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        color: #333;
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
 
-    .main {
-        width: 100%;
-        max-width: 1170px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        background-color: #a67a00;
-        margin-top: 10px;
-        border: 3px solid #293F6F;
-        border-radius: 10px;
-        padding: 8px 16px;
-    }
+.main {
+    width: 100%;
+    max-width: 1170px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #a67a00;
+    margin-top: 10px;
+    border: 3px solid #293F6F;
+    border-radius: 10px;
+    padding: 8px 16px;
+}
 
-    .main ul {
-        margin: auto;
-        padding: 20px 0 0;
-        list-style: none;
-        text-align: right;
-    }
+.main ul {
+    margin: auto;
+    padding: 20px 0 0;
+    list-style: none;
+    text-align: right;
+}
 
-    .main ul li {
-        float: none;
-        display: inline-block;
+.main ul li {
+    float: none;
+    display: inline-block;
 
-    }
+}
 
-    .main ul li:nth-child(1) {
-        float: left;
-    }
+.main ul li:nth-child(1) {
+    float: left;
+}
 
-    .main ul li:nth-child(2) {
-        float: left;
-    }
+.main ul li:nth-child(2) {
+    float: left;
+}
 
-    .main ul li:nth-child(3) {
-        float: left;
-    }
-
-
-    .main ul li a {
-        color: whitesmoke;
-        font-size: 20px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: block;
-        font-family: lucida console;
-        padding: 5px 20px;
-        margin-bottom: 15px;
-    }
-
-    .main ul li a:hover {
-        transition: 1s;
-        background-color: white;
-        border-radius: 10px;
-        color: black;
-    }
-
-    #navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .logo {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        left: 50%;
-        top: 0%;
-        transform: translate(0, 0);
-        content: '';
-        transition: 1s;
-        border-radius: 50px;
-        margin-left: -50px;
-    }
-
-    .logo:hover {
-        transform: translate(0, 0) rotate(360deg);
-        transition: 2s;
-    }
-
-    .hero-image {
-        height: 600px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("imgs/campus.jpg");
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        color: #fff;
-        border-bottom: 4px solid #1a5276;
-    }
-
-    .Name {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #FDD700;
-        font-family: "adobe-garamond-pro", "Garamond", serif;
-        font-weight: 900;
-        font-style: normal;
-        font-size: 100px;
-        letter-spacing: 1px;
-        text-shadow: 5px 5px 0 #293F6F, -1px 1px 0 #293F6F, 1px -1px 0 #293F6F,
-            -1px -1px 0 #293F6F, 0px 1px 0 #293F6F, 0px -1px 0 #293F6F,
-            -1px 0px 0 #293F6F, 1px 0px 0 #293F6F, 2px 2px 0 #293F6F, -2px 2px 0 #293F6F,
-            2px -2px 0 #293F6F, -2px -2px 0 #293F6F, 0px 2px 0 #293F6F,
-            0px -2px 0 #293F6F, -2px 0px 0 #293F6F, 2px 0px 0 #293F6F, 1px 2px 0 #293F6F,
-            -1px 2px 0 #293F6F, 1px -2px 0 #293F6F, -1px -2px 0 #293F6F,
-            2px 1px 0 #293F6F, -2px 1px 0 #293F6F, 2px -1px 0 #293F6F,
-            -2px -1px 0 #293F6F;
-    }
+.main ul li:nth-child(3) {
+    float: left;
+}
 
 
-    .majors-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        padding: 60px 40px;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+.main ul li a {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    font-family: lucida console;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+}
 
-    .major-card {
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-        padding: 25px 20px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        border-top: 5px solid #fdd700;
-    }
+.main ul li a:hover {
+    transition: 1s;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
 
-    .major-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-    }
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-    .major-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #1a5276;
-        margin: 15px 0 8px;
-    }
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(0, 0);
+    content: '';
+    transition: 1s;
+    border-radius: 50px;
+    margin-left: -50px;
+}
 
-    .major-school {
-        font-size: 1rem;
-        color: #555;
-        font-weight: 500;
-    }
+.logo:hover {
+    transform: translate(0, 0) rotate(360deg);
+    transition: 2s;
+}
+
+/* hero area: uses the same campus image as a backdrop with dark overlay for contrast */
+.hero-image {
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("imgs/campus.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    border-bottom: 4px solid #1a5276;
+}
+
+.Name {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FDD700;
+    font-family: "adobe-garamond-pro", "Garamond", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #293F6F, -1px 1px 0 #293F6F, 1px -1px 0 #293F6F,
+        -1px -1px 0 #293F6F, 0px 1px 0 #293F6F, 0px -1px 0 #293F6F,
+        -1px 0px 0 #293F6F, 1px 0px 0 #293F6F, 2px 2px 0 #293F6F, -2px 2px 0 #293F6F,
+        2px -2px 0 #293F6F, -2px -2px 0 #293F6F, 0px 2px 0 #293F6F,
+        0px -2px 0 #293F6F, -2px 0px 0 #293F6F, 2px 0px 0 #293F6F, 1px 2px 0 #293F6F,
+        -1px 2px 0 #293F6F, 1px -2px 0 #293F6F, -1px -2px 0 #293F6F,
+        2px 1px 0 #293F6F, -2px 1px 0 #293F6F, 2px -1px 0 #293F6F,
+        -2px -1px 0 #293F6F;
+}
+
+
+/* Responsive grid that holds dynamically-generated major cards */
+.majors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.major-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-top: 5px solid #fdd700;
+}
+
+.major-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.major-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a5276;
+    margin: 15px 0 8px;
+}
+
+.major-school {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+}
