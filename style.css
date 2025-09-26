@@ -1,16 +1,20 @@
 body {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     background-color: skyblue;
-    height: 100vh;
+    /* don't force a 100vh/100% which can create overflow on small viewports */
+    min-height: 100vh;
     width: 100%;
-    background-size: 100% 100%;
-    overflow: hidden;
+    background-size: cover;
     background-repeat: no-repeat;
+    /* prevent accidental horizontal scroll while preserving vertical scroll */
+    overflow-x: hidden;
 }
 
 .main {
-    width: 1170px;
+    width: 100%;
+    max-width: 1170px;
+    box-sizing: border-box;
     margin: 0 auto;
     background-color: #a67a00;
     margin-top: 10px;
@@ -88,10 +92,13 @@ body {
 
 #myVideo {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    right: 50%;
+    bottom: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(50%, 50%);
+    object-fit: cover;
+    /* cover the viewport without creating overflow */
     z-index: -1;
 }
 

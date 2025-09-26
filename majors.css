@@ -7,12 +7,16 @@
     }
 
     .main {
-        width: 1170px;
+        /* make main responsive so it never forces horizontal overflow */
+        width: 100%;
+        max-width: 1170px;
+        box-sizing: border-box;
         margin: 0 auto;
         background-color: #a67a00;
         margin-top: 10px;
         border: 3px solid #293F6F;
         border-radius: 10px;
+        padding: 8px 16px;
     }
 
     .main ul {
