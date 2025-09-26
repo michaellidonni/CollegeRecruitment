@@ -7,7 +7,6 @@
     }
 
     .main {
-        /* make main responsive so it never forces horizontal overflow */
         width: 100%;
         max-width: 1170px;
         box-sizing: border-box;
